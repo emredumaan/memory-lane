@@ -1,0 +1,98 @@
+.inputWrapper {
+  position: relative;
+  background-color: inherit;
+}
+
+.inputWrapper input {
+  font-family: 'Epilogue', sans-serif;
+  padding: 1rem;
+  border: solid 1px var(--border-color);
+  outline: 0;
+  background: transparent;
+  width: 100%;
+  z-index: 1;
+  font-size: 1rem;
+  transition: all 200ms;
+  border-radius: 8px;
+} 
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+  box-shadow: 0 0 0px 1000px transparent inset !important;
+}
+
+input:-webkit-autofill {
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.inputWrapper input:-webkit-autofill {
+  background: transparent;
+}
+
+.inputWrapper label {
+  position: absolute;
+  left: 0;
+  margin: 1.05rem;
+  color: var(--text-color);
+  font-size: 1rem;
+  background-color: inherit;
+  display: none;
+  opacity: .5;
+  transition: all 200ms;
+  display: inline-block;
+  padding: 0 5px;
+  cursor: text;
+  user-select: none;
+  -webkit-user-select: none;
+  pointer-events: none;
+}
+
+.inputWrapper .errorMessage {
+  color: var(--danger-color);
+  font-size: .8rem;
+  position: absolute;
+  left: 0;
+  bottom: -1.2rem;
+}
+
+.inputWrapper.hasError {
+  margin-bottom: 1.2rem;
+}
+
+.inputWrapper.hasError input{
+  border-color: var(--danger-color) !important;
+}
+
+.inputWrapper.focused.hasError label {
+  color: var(--danger-color);
+}
+
+.inputWrapper.focused input{
+  border-color: var(--primary-color);
+}
+
+.inputWrapper.focused label {
+  margin-top: 0;
+  transform: translate(-8%,-50%) scale(.8);
+  background-color: var(--background-color);
+  opacity: 1;
+  color: var(--primary-color);
+}
+
+
+
+.passToggle {
+  position: absolute;
+  right: 1px;
+  border-radius: 2px;
+  transform: translateY(-50%);
+  top: 50%;
+  border: none;
+  padding: .5rem .8rem;
+  font-size: smaller;
+  cursor: pointer;
+  background-color: inherit;
+  user-select: none;
+}

@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  font-family: 'Epilogue', sans-serif;
+  
+  --primary-color: #009963;
+  --background-color: rgb(25, 25, 25);
+  --border-color: rgba(121, 121, 121, 0.383);
+  --text-color: #d0d0d0;
+  --danger-color: #f62222;
+
+  background-color: var(--background-color);
+  color: #fff;
+
+  color-scheme: dark;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.mark {
+  color: var(--primary-color);
+}
+
+.Toastify *{
+  font-family: inherit;
+}
+
+.loader {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: rgba(121, 121, 121, 0.446);
+}
+
+.loader svg {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+@media screen and (max-width:720px) {
+  html {
+    font-size: 13px;
+  }
+}

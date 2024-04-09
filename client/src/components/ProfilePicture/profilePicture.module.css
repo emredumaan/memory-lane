@@ -1,0 +1,14 @@
+.pp {
+    display: flex;
+    user-select: none;
+    -webkit-user-select: none;
+    font-weight: 600;
+    font-size: .95rem;
+    font-family: inherit;
+    background-color: var(--border-color);
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}

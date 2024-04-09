@@ -1,0 +1,39 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: #131313;
+    color: #a3a3a3;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    align-items: center;
+    font-size: smaller;
+}
+
+footer img {
+    width: 9rem;
+}
+
+.brand {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.brand > a {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.credit {
+    border-top: 1px solid rgba(108, 108, 108, 0.113);
+    width: 100%;
+    padding-top: 1.5rem;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+.brand > a:hover, .credit > a:hover {
+    filter: brightness(0.7);
+}

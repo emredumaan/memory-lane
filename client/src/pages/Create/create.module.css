@@ -1,0 +1,236 @@
+.top {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: -3rem;
+}
+
+.top div {
+    width: 100%;
+}
+
+.top .publicity {
+    background: rgb(50, 50, 50);
+    border-radius: 8px;
+    display: flex;
+    padding: .3rem;
+    width: max-content;
+    margin: 1rem 0;
+    gap: .3rem;
+    position: relative;
+}
+
+.publicity button {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    font-size: inherit;
+    font-family: inherit;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    border-radius: 7px;
+    padding: .8rem;
+    color: #c5c5c5;
+    cursor: pointer;
+    user-select: none;
+    z-index: 1;
+    -webkit-user-select: none;
+}
+
+.publicity::before {
+    content: '';
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    border: .2rem solid rgb(50, 50, 50);
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: var(--background-color);
+    border-radius: 8px;
+    z-index: 0;
+    transition: all 200ms;
+}
+
+.publicity.toggled::before {
+    left: 50%;
+}
+
+.publicity span.active {
+    color: #fff;
+}
+
+.container {
+    width: 75%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.topMenu {
+    position: absolute; 
+    overflow-x: auto;
+    display: flex;
+    justify-content: center;
+    gap: .7rem;
+    width: 70%;
+    padding: .7rem;
+    left: 50%;
+    top: 75px;
+    z-index: 1;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-bottom-color: var(--border-color);
+    transform: translate(-50%, 7rem);
+    transition: background-color 300ms, border 300ms;
+}
+
+.topMenu.sticky {
+    position: fixed;
+    top: 75px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.024);
+    border-color: var(--border-color);
+    transform: translateX(-50%);
+    backdrop-filter: blur(12.5px);
+}
+
+.topMenu button {
+    padding: .5rem;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.topMenu button:not(.isActive):hover {
+    background-color: rgba(102, 102, 102, 0.062);
+}
+
+.topMenu button.isActive {
+    background-color: rgba(102, 102, 102, 0.11);
+    color: var(--primary-color);
+}
+
+.tiptap {
+    padding-top: 5rem !important;
+    margin-top: 3rem;
+    padding: 1rem;
+    outline: 0;
+    background: rgba(0, 0, 0, 0.66);
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+    min-height: 55vh;
+}
+
+.tiptap>*:not(hr) {
+    padding: .7rem;
+    line-height: 1.2rem;
+}
+
+.tiptap>h2 {
+    line-height: 2rem;
+}
+
+.tiptap>h3 {
+    line-height: 1.5rem;
+}
+
+.highlighted {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+ul,
+ol {
+    padding: 0 1rem;
+}
+
+code {
+    background-color: rgba(#616161, 0.1);
+    color: #c5c5c5;
+}
+
+pre {
+    background: #0D0D0D;
+    color: #c5c5c5;
+    font-family: 'JetBrainsMono', monospace;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.tiptap blockquote {
+    padding-left: 1rem;
+    border-left: 3px solid rgba(128, 128, 128, 0.211);
+    color: rgba(255, 255, 255, 0.832);
+}
+
+.tiptap hr {
+    border: none;
+    border-top: 2px solid rgba(128, 128, 128, 0.211);
+    margin: 2rem 0;
+}
+
+.submitWrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+.submitWrapper button {
+    width: max-content;
+}
+
+@media screen and (max-width:1021px) {
+    .topMenu {
+        justify-content: flex-start;
+    }
+
+}
+
+@media screen and (min-width:640px) {
+    .topMenu::-webkit-scrollbar {
+        height: 5px;
+    }
+
+    .topMenu::-webkit-scrollbar-thumb {
+        background: var(--border-color);
+        border-radius: 50px;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .container {
+        width: 100%;
+    }
+
+    .tiptap {
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+
+    .top {
+        flex-direction: column;
+    }
+
+    .top .publicity {
+        width: 100%;
+    }
+
+    .topMenu {
+        justify-content: flex-start;
+        width: 85%;
+        transform: translate(-50%, 10.5rem);
+    }
+
+    .tiptap>*:not(hr) {
+        padding: .5rem;
+    }
+
+    .submitWrapper button {
+        width: 100%;
+    }
+}
