@@ -4,12 +4,12 @@ Memory Lane is a diary web application. It allows users to create accounts, log 
 
 ## Demo
 Demo link: https://memory-lane-demo-kohl.vercel.app/
+Demo version has some restrictions and some feautures of it may not work as expected.
 
 ### "Test User" credentials:
 Email: `test@user.tld`
 Password: `password`
 
-Demo version has some restrictions and some feautures of it may not work as expected.
 
 ## Technologies Used
 
