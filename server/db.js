@@ -16,10 +16,10 @@ async function connect() {
         await connection.query(`CREATE DATABASE IF NOT EXISTS \`${name}\`;`)
 
         await sequelize.authenticate()
-        console.log("mysql server bağlantısı yapıldı")
+        console.log("mysql server connection succesfull")
     }
     catch (err) {
-        console.log("bağlantı hatası ", err)
+        console.log("mysql server connnection error ", err)
     }
 }
 

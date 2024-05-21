@@ -2,6 +2,16 @@
 
 Memory Lane is a diary web application. It allows users to create accounts, log in, create diaries called "lanes", set them as public or private, and read public lanes created by other users. The app also features account management functionalities such as changing passwords, names, and deleting accounts. 
 
+## Demo
+Demo link: https://memory-lane-demo-kohl.vercel.app/
+
+**"Test User" credentials:**
+
+*Email:* test@user.tld
+*Password:* password
+
+Demo version has some restrictions and some feautures of it may not work as expected.
+
 ## Technologies Used
 
 - Frontend:
@@ -24,9 +34,9 @@ Memory Lane is a diary web application. It allows users to create accounts, log 
 - Mobile-friendly design
 - Account management (password change, name change, account deletion)
 
-## Locally Running for Development
+## Testing and Development
 
-To run the Memory Lane web application locally, follow these steps:
+To run the Memory Lane web application locally in dev mode, follow these steps:
 
 1. Clone the repository:
 
@@ -66,7 +76,7 @@ cd client
 npm run dev
 ```
 
-8. Access the Memory Lane web app in your browser at `http://localhost:5173`.
+8. You can access the app in your browser at `http://localhost:5173`.
 
 ## Screenshots
 
