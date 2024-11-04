@@ -82,7 +82,7 @@ const PublicLanes : React.FC = () => {
     if (laneId) return (
         <div className={styles.containerLane}>
             <button onClick={scrollToTop} className={`${styles.backToTop} ${!onPageTop ? styles.active : ''}`}>
-                <IoIosArrowUp /> Back to top
+                <IoIosArrowUp />
             </button>
             <div className={styles.menu}>
                 <h1 className={styles.title}>
